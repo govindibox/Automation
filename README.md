@@ -111,3 +111,18 @@ module.exports = defineConfig({
 ```sh
 	>>npm run test 
 ```
+
+- Run following command to install typescript package and initialize in our project
+```sh
+	>>npm install  typescript --save-dev
+	>>npx tsc --init --types cypress --lib dom,es6
+```
+- Update the following line in `.cypress-cucumber-preprocessorrc.json` in root directory
+```sh
+{
+	"stepDefinitions": [		
+		"cypress/stepDefinitions/*.js",
+		"cypress/stepDefinitions/*.ts"
+	]
+}
+```
